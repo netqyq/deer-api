@@ -1,0 +1,35 @@
+# Routes Config
+#
+# This file defines all application routes (Higher priority routes first)
+#
+
+module:testrunner
+# module:jobs
+
+
+GET     /                                       App.Index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/*filepath                       Static.Serve("public")
+
+
+# login to get a token
+POST   /login                                 Users.Login
+POST   /register                            Users.Register
+
+
+# resources :products 
+GET         /products                            Products.Index
+POST        /products                            Products.Create
+GET         /products/:id                        Products.Show
+PUT         /products/:id                        Products.Update
+PATCH       /products/:id                        Products.Update
+DELETE      /products/:id                        Products.Destroy
+
+
+
+# Catch all
+*       /:controller/:action                    :controller.:action

@@ -28,15 +28,19 @@ POST /login
 ```
 
 Example response from the API:
-```
-201 Created
-{"jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}
+```js
+{
+    "result": "login success",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ldHF5cUAxNjMuY29tIiwibmJmIjoxNDQ0NDc4NDAwfQ.bZo1DzrzZBetB9IP7fVip5XA_GiFBb_z8zDNTalReuU"
+}
 ```
 
 To make an authenticated request to your API, you need to pass the token via the request header:
 ```
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...
 GET /my_resources
+POST /my_resources
+...
 ```
 
 

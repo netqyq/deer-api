@@ -1,6 +1,5 @@
 # deer-api
-An API server using JWT Authentication based on Revel framework.
-
+API Demo based on Revel framework with JWT Authentication.
 
 ### About JWT Authetication
 
